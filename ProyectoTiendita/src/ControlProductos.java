@@ -16,9 +16,21 @@ public class ControlProductos {
         throw new UnsupportedOperationException("En construcción."); 
     }
 
-    void ver() {
-        throw new UnsupportedOperationException("En construcción."); 
+    void ver() {void ver() {
+    System.out.println("--------------------------------------------");
+    System.out.printf("%-10s %-20s %-10s%n", "CODIGO", "DESCRIPCION", "PRECIO");
+    System.out.println("--------------------------------------------");
+
+    for (Producto producto : listaProductos) {
+        System.out.printf("%-10d %-20s $%-10.2f%n",
+                producto.getCodigo(),
+                producto.getDescripcion(),
+                producto.getPrecio());
     }
+
+    System.out.println("--------------------------------------------");
+}
+
 
     void buscar() {
         throw new UnsupportedOperationException("En construcción."); 
