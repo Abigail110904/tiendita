@@ -13,8 +13,24 @@ public class ControlProductos {
     }
 
     void agregar() {
-        throw new UnsupportedOperationException("En construcción."); 
-    }
+     Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Ingresa el Codigo del producto: ");
+        int codigo = teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.print("Ingresa la Descripcion del producto: ");
+        String descripcion = teclado.nextLine();
+
+        System.out.print("Precio del producto: ");
+        float precio = teclado.nextFloat();
+
+        Producto nuevoProducto = new Producto(codigo, descripcion, precio);
+
+        listaProductos.add(nuevoProducto);
+
+        System.out.println("Producto agregado correctamente.");
+     }
 
     void ver() {
         throw new UnsupportedOperationException("En construcción."); 
